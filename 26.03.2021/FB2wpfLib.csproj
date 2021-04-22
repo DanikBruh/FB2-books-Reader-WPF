@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5660223B-EC4E-4F9C-B105-519D4A4269D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>_26._03._2021</RootNamespace>
+    <AssemblyName>26.03.2021</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>book-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\AnnotationItem.cs" />
+    <Compile Include="Elements\AnnotationType.cs" />
+    <Compile Include="Elements\AuthorItem.cs" />
+    <Compile Include="Elements\AuthorType.cs" />
+    <Compile Include="Elements\BinaryItem.cs" />
+    <Compile Include="Elements\BodyItem.cs" />
+    <Compile Include="Elements\CiteItem.cs" />
+    <Compile Include="Elements\CustomTextFieldType.cs" />
+    <Compile Include="Elements\DateItem.cs" />
+    <Compile Include="Elements\EmptyLineItem.cs" />
+    <Compile Include="Elements\EpigraphItem.cs" />
+    <Compile Include="Elements\FB2Const.cs" />
+    <Compile Include="Elements\FB2TextItem.cs" />
+    <Compile Include="Elements\GenreType.cs" />
+    <Compile Include="Elements\ImageItem.cs" />
+    <Compile Include="Elements\InlineImageItem.cs" />
+    <Compile Include="Elements\InternalLinkItem.cs" />
+    <Compile Include="Elements\OutPutDocumentType.cs" />
+    <Compile Include="Elements\ParagraphItem.cs" />
+    <Compile Include="Elements\PartShareInstructionType.cs" />
+    <Compile Include="Elements\Poem\PoemItem.cs" />
+    <Compile Include="Elements\Poem\StanzaItem.cs" />
+    <Compile Include="Elements\Poem\VPoemParagraph.cs" />
+    <Compile Include="Elements\SectionItem.cs" />
+    <Compile Include="Elements\SequenceType.cs" />
+    <Compile Include="Elements\ShareInstructionType.cs" />
+    <Compile Include="Elements\SimpleText.cs" />
+    <Compile Include="Elements\StyleElement.cs" />
+    <Compile Include="Elements\SubTitleItem.cs" />
+    <Compile Include="Elements\Table\BaseCellElement.cs" />
+    <Compile Include="Elements\Table\TableCellItem.cs" />
+    <Compile Include="Elements\Table\TableHeadingItem.cs" />
+    <Compile Include="Elements\Table\TableItem.cs" />
+    <Compile Include="Elements\Table\TableRowItem.cs" />
+    <Compile Include="Elements\TextAuthorItem.cs" />
+    <Compile Include="Elements\TextFieldType.cs" />
+    <Compile Include="Elements\TitleItem.cs" />
+    <Compile Include="FB2File.cs" />
+    <Compile Include="MenuBook.cs" />
+    <Compile Include="FB2Reader.cs" />
+    <Compile Include="HeaderItems\CoverPage.cs" />
+    <Compile Include="HeaderItems\CustomInfo.cs" />
+    <Compile Include="HeaderItems\ItemDocumentInfo.cs" />
+    <Compile Include="HeaderItems\ItemInfoBase.cs" />
+    <Compile Include="HeaderItems\ItemPublishInfo.cs" />
+    <Compile Include="HeaderItems\ItemTitleInfo.cs" />
+    <Compile Include="IFB2Reader.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\light-add.png" />
+    <Resource Include="images\light-read.png" />
+    <Resource Include="images\white-add.png" />
+    <Resource Include="images\white-read.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\no-img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\light-library.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\white-library.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="book-icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

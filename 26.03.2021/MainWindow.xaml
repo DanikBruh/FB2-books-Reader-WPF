@@ -1,0 +1,61 @@
+﻿<Window x:Class="FB2wpfLib.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Icon="icon.ico"
+        Title="BookReader" Height="700" Width="650">
+    
+    <Grid x:Name="gRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Menu x:Name="mMenu" Grid.Column="0" Background="#101820">
+
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel Orientation="Vertical"/>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+
+            <MenuItem x:Name="miLibrary" Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}" Background="{x:Null}" BorderBrush="{x:Null}" Click="ShowLibrary_Click">
+                <MenuItem.Header>
+                    <StackPanel>
+                        <Image Source="images/light-library.png" Height="25" Width="25" />
+                    </StackPanel>
+                </MenuItem.Header>
+                <MenuItem.ToolTip>
+                    <ToolTip>Библиотека</ToolTip>
+                </MenuItem.ToolTip>
+            </MenuItem>
+
+            <MenuItem x:Name="miReadBooks" Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}" Background="{x:Null}" BorderBrush="{x:Null}" Click="ReadingPage_Click" >
+                <MenuItem.Header>
+                    <StackPanel>
+                        <Image Source="images/light-read.png" Height="25" Width="25" />
+                    </StackPanel>
+                </MenuItem.Header>
+                <MenuItem.ToolTip>
+                    <ToolTip>Читать книги</ToolTip>
+                </MenuItem.ToolTip>
+            </MenuItem>
+
+            <MenuItem x:Name="miAddBook" Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}" Background="{x:Null}" BorderBrush="{x:Null}" Click="miAddFile_Click">
+                <MenuItem.Header>
+                    <StackPanel>
+                        <Image Source="images/light-add.png" Height="25" Width="25"/>
+                    </StackPanel>
+                </MenuItem.Header>
+                <MenuItem.ToolTip>
+                    <ToolTip>Добавить книгу</ToolTip>
+                </MenuItem.ToolTip>
+            </MenuItem>
+        </Menu>
+        
+        <FlowDocumentReader Grid.Column="1" x:Name="fdReader" SelectionBrush="{x:Null}">
+            <FlowDocument x:Name="fd"/>
+        </FlowDocumentReader>
+    </Grid>
+</Window>
